@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="container pt-4">
+     <div class="row">
+         <div class="col-md-4 offset-md-4">
+      <div class="card card-body">
+         <form action="/update/{{date.0}}" method="POST">
+              <div>
+                  <strong><label for="nombre" class="font-weight-bold">Nombre del cliente</label></strong>
+      <input class="form-control" type="text" name="nombre" id="nombre"placeholder="Escriba su nombre completo" value="{{date.1}}">
+  </div>
+
+  <div>
+      <strong><label for="descripcion">¿Como le pareció el asistente?</label></strong>
+      <textarea class="form-control" name="descripcion" id="descripcion" placeholder="Escriba sus primeras impresiones">{{date.2}}</textarea>
+  </div>
+
+  <div>
+      <strong><label for="numerodetelefono">Numero de telefono</label></strong>
+      <input class="form-control" type="text" name="numerodetelefono" id="numerodetelefono"placeholder="Escriba su numero de telefono" value="{{date.3}}">
+  </div>
+    <div>
+        <strong><label for="correo">Su correo electronico</label></strong>
+      <input class="form-control" type="text" name="correo" id="correo"placeholder="Escriba su correo electronico" value="{{date.4}}">
+  </div>
+             <div></div>
+             <div style="align-items: center; display: flex; justify-content: center;">
+              <button type="submit" class="btn btn-primary btn-block">
+              Actualizar
+            </button>
+                 </div>
+         </form>
+</div>
+         </div>
+     </div>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="container">
+    <div class="row">
+         <div class="col-md-4 offset-md-4">
+      <div class="card card-body">
+         <form action="/actualizar/{{sug.0}}" method="POST">
+              <div>
+                  <strong><label for="nombre2">Nombre del cliente</label></strong>
+      <input class="form-control" class="form-label" type="text" name="nombre2" id="nombre2"placeholder="Escriba su nombre completo" value="{{sug.1}}">
+  </div>
+
+  <div>
+      <strong><label for="sugerenicas">Escriba su sugerencia</label></strong>
+      <textarea class="form-control" name="sugerenicas" id="sugerenicas" placeholder="Escriba sus primeras impresiones">{{sug.2}}</textarea>
+  </div>
+
+  <div>
+      <strong> <label for="numerodetelefono2">Numero de telefono</label></strong>
+      <input class="form-control" type="text" name="numerodetelefono2" id="numerodetelefono2"placeholder="Escriba su numero de telefono" value="{{sug.3}}">
+  </div>
+    <div>
+        <strong> <label for="correo2">Su correo electronico</label></strong>
+      <input class="form-control" type="text" name="correo2" id="correo2"placeholder="Escriba su correo electronico" value="{{sug.4}}">
+  </div>
+             <div></div>
+             <div style="align-items: center; display: flex; justify-content: center;">
+              <button type="submit" class="btn btn-primary btn-block">
+              Actualizar
+            </button>
+                 </div>
+         </form>
+</div>
+         </div>
+    </div>
+</div>
+<div>
+
+</div>
+{% endblock %}

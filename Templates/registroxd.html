@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Asistente Virtual">
+    <meta name="description" content="Sitio web para adquirir el asistente virtual: Guerrero Assist">
+    <meta name="author" content="Paola Garcia">
+    <meta name="author" content="Francisco Javier Barrera Romero">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guerrero Assist</title>
+    <link rel="shortcut icon" href="./static/images/icono_paginaassist.png" type="image/x-icon">
+    <link rel="stylesheet" href="./static/css/style_from.css" type="text/css">
+     <link rel="stylesheet" href="./static/css/menu.css" type="text/css">
+    <script type="text/javascript">
+        function despiega_mensaje(){
+            document.getElementById("msg").innerHTML="https://descargar.com";
+        }
+    </script>
+</head>
+<body>
+<from>
+    <div class="header">
+      <img src="./static/images/LOGO_PAGINA.svg">
+  <h2>¡Registrate!</h2><h1>Guerrero Assist</h1>
+  </div>
+</from>
+     </header>
+     <nav class="navegacion">
+
+            <ul class="menu">
+              <li class="first-item"> <a href="/grid_html" target="#"><img  src="./static/images/quienes_somos_icon.png" alt="" class="imagen">
+                <span class="text-item">¿Quiénes somos?</span>
+                <span class="down-item"></span> </a>
+               <span class="down-item"></span> </a>
+              <li> <a target="contenedor" href="/sugerencias"> <img src="./static/images/discapacidad_icon.png" alt="" class="imagen">
+            <span class="text-item">Sugerencias</span>
+            <span class="down-item"></span></a>
+              <li> <a target="contenedor" href="/" ><img src="./static/images/registro_icon.png" alt="" class="imagen">
+                <span class="text-item">Regresar al inicio</span>
+                <span class="down-item"></span>
+            </a>
+            </ul>
+
+</nav>
+
+    <div></div>
+      <div class="container">
+         <form action="{{url_for('guardar_datos')}}" method="post">
+              <div>
+      <label for="nombre">Nombre del cliente</label>
+      <input type="text" name="nombre" id="nombre"placeholder="Escriba su nombre completo">
+  </div>
+
+  <div>
+      <label for="descripcion">¿Como le pareció el asistente?</label>
+      <textarea name="descripcion" id="descripcion" placeholder="Escriba sus primeras impresiones"></textarea>
+  </div>
+
+  <div>
+      <label for="numerodetelefono">Numero de telefono</label>
+      <input type="text" name="numerodetelefono" id="numerodetelefono"placeholder="Escriba su numero de telefono">
+  </div>
+    <div>
+      <label for="correo">Su correo electronico</label>
+      <input type="text" name="correo" id="correo"placeholder="Escriba su correo electronico">
+  </div>
+    <div>
+        <button id="BotonEnviar" class="boton" type="submit" name="enviar" >Enviar datos</button>
+         <a href="/consultar_datos"><input type="button" class="boton" value="Mostrar datos"></a>
+         <input type="button" class="boton" target="#" value="Descargar" onClick="despiega_mensaje()">
+
+  <div>
+  </div>
+      <div>
+<div>
+    <h1 class="Link">Zona de descargas</h1>
+
+</div>
+
+<div id="msg" class="contenido" hfer="www.mega.com"></div>
+
+  <p class="footer">&copy; Paola Gacia & Francisco Barrera | UTTT Campus Tepetitlán</p>
+</body>
+</html>

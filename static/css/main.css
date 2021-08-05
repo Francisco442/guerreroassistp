@@ -1,0 +1,14 @@
+body {
+  background: #D7E4EF;
+}
+.footer {
+  grid-area: footer;
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.footer p{
+    text-align: center;
+    font-weight: bold;
+    background-color: rgba(4, 4, 4, 0.500)
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Asistente Virtual">
+    <meta name="description" content="Sitio web para adquirir el asistente virtual: Guerrero Assist">
+    <meta name="author" content="Paola Garcia">
+    <meta name="author" content="Francisco Javier Barrera Romero">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guerrero Assist</title>
+    <link rel="shortcut icon" href="./static/images/icono_paginaassist.png" type="image/x-icon">
+    <link rel="stylesheet" href="./static/css/style_su.css" type="text/css">
+     <link rel="stylesheet" href="./static/css/menu.css" type="text/css">
+</head>
+<body>
+<from>
+    <div class="header">
+      <img src="./static/images/LOGO_PAGINA.svg">
+  <h2>Tu opinión es importante</h2><h1>Guerrero Assist</h1>
+  </div>
+</from>
+     </header>
+    <nav class="navegacion">
+
+            <ul class="menu">
+              <li class="first-item"> <a href="/grid_html" target="#"><img  src="./static/images/quienes_somos_icon.png" alt="" class="imagen">
+                <span class="text-item">¿Quiénes somos?</span>
+                <span class="down-item"></span> </a>
+               <span class="down-item"></span> </a>
+              <li> <a target="contenedor" href="/registro"> <img src="./static/images/discapacidad_icon.png" alt="" class="imagen">
+            <span class="text-item">Regístrate</span>
+            <span class="down-item"></span></a>
+              <li> <a target="contenedor" href="/" ><img src="./static/images/registro_icon.png" alt="" class="imagen">
+                <span class="text-item">Volver al inicio</span>
+                <span class="down-item"></span>
+            </a>
+            </ul>
+    </nav>
+
+    <div class="text">Para nosotros tu opinión es importante, así que en este espacio podrás contarnos que te pareció "Guerrero Assist"
+        y como sugerencias de como podríamos mejorar y como te gustaría que cambiáramos.</div>
+      <div class="col-md-5">
+         <form action="{{url_for('guardar_sugerencias')}}" method="post">
+              <div>
+      <label for="nombre2">Nombre</label>
+      <input type="text" name="nombre2" id="nombre2"placeholder="Escriba su nombre completo">
+  </div>
+
+  <div>
+      <label for="sugerencias">Escriba su sugerencia</label>
+      <textarea class="textarea" name="sugerencias" id="sugerencias" placeholder="Escriba sus sugerencias a mejorar"></textarea>
+  </div>
+
+  <div>
+      <label for="numerodetelefono2">Numero de telefono</label>
+      <input type="text" name="numerodetelefono2" id="numerodetelefono2"placeholder="Escriba su numero de telefono">
+  </div>
+    <div>
+      <label for="correo2">Su correo electronico</label>
+      <input type="text" name="correo2" id="correo2"placeholder="Escriba su correo electronico">
+  </div>
+    <div>
+        <button id="BotonEnviar" class="boton" type="submit" name="enviar" >Enviar sugerencia</button>
+         <a href="/consultar_sugerencias"><input type="button" class="boton" value="Mostrar sugerencias"></a>
+
+
+  <div>
+  </div>
+      <div>
+
+  <p class="footer">&copy; Paola Gacia & Francisco Barrera | UTTT Campus Tepetitlán</p>
+</body>
+</html>
